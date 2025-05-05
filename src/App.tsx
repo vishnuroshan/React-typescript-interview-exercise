@@ -54,14 +54,21 @@ export default function App() {
       {loading && (
         <div style={{ marginBottom: "1rem", color: "#555" }}>Loading...</div>
       )}
-      <ol style={{ paddingLeft: "1.5rem" }}>
-        {spells.map((s) => (
-          <li key={s.index} style={{ marginBottom: "1rem" }}>
-            <h3 style={{ margin: 0 }}>{s.spell}</h3>
-            <span style={{ color: "#666" }}>- {s.use}</span>
-          </li>
-        ))}
-      </ol>
+      {spells.length === 0 && !loading && (
+        <div style={{ marginBottom: "1rem", color: "#555" }}>
+          No spells found
+        </div>
+      )}
+      {spells.length > 0 && !loading && (
+        <ol style={{ paddingLeft: "1.5rem" }}>
+          {spells.map((s) => (
+            <li key={s.index} style={{ marginBottom: "1rem" }}>
+              <h3 style={{ margin: 0 }}>{s.spell}</h3>
+              <span style={{ color: "#666" }}>- {s.use}</span>
+            </li>
+          ))}
+        </ol>
+      )}
     </div>
   );
 }

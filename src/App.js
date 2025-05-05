@@ -30,5 +30,5 @@ export default function App() {
                     fontSize: "1rem",
                     marginBottom: "1rem",
                     boxSizing: "border-box"
-                } }), loading && (_jsx("div", { style: { marginBottom: "1rem", color: "#555" }, children: "Loading..." })), _jsx("ol", { style: { paddingLeft: "1.5rem" }, children: spells.map((s) => (_jsxs("li", { style: { marginBottom: "1rem" }, children: [_jsx("h3", { style: { margin: 0 }, children: s.spell }), _jsxs("span", { style: { color: "#666" }, children: ["- ", s.use] })] }, s.index))) })] }));
+                } }), loading && (_jsx("div", { style: { marginBottom: "1rem", color: "#555" }, children: "Loading..." })), spells.length === 0 && !loading && (_jsx("div", { style: { marginBottom: "1rem", color: "#555" }, children: "No spells found" })), spells.length > 0 && !loading && (_jsx("ol", { style: { paddingLeft: "1.5rem" }, children: spells.map((s) => (_jsxs("li", { style: { marginBottom: "1rem" }, children: [_jsx("h3", { style: { margin: 0 }, children: s.spell }), _jsxs("span", { style: { color: "#666" }, children: ["- ", s.use] })] }, s.index))) }))] }));
 }
