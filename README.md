@@ -16,7 +16,7 @@
    - If the user changes the search input before a request completes, cancel any pending requests to prevent unnecessary API calls.
 
 6. **Testing**:  
-   - Write tests for the implemented functionality. This should include:
+   - Configure a testing framework into the repo and Write tests for the implemented functionality. This should include:
      - Verifying that the API call is triggered correctly.
      - Checking that the loading state appears while data is being fetched.
      - Ensuring the error handling works as expected.
